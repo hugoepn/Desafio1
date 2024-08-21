@@ -4,20 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header><h1>Bem vindo ao decodificador do Dest</h1></header>
-    <main>
-      <textarea rows="20" cols="40" placeholder="Digite seu texto"></textarea>
-    </main>
-    <div class="botoes">
-      <p class="info">Apenas letras minusculas e sem acento</p>
-      <button>Criptografar</button><button>Descriptografar</button>
+    <header><h1>Bem vindo ao decodificador</h1></header>
+    <div class="tela">
+        <main>
+            <div class="texto">
+                <textarea rows="20" cols="40" placeholder="Digite seu texto"></textarea>
+            </div>
+        <div class="botoes">
+          <p class="info">Apenas letras minusculas e sem acentos</p>
+          <button>Criptografar</button><button>Descriptografar</button>
+        </div>
+      </main>
+        <section class="direita">
+          <div class="sem-reposta"><img src="lupa.png" alt="" /></div>
+          <div class="resposta">
+            <textarea rows="20" cols="40"></textarea>
+            <button>Copiar</button>
+          </div>
     </div>
-    <section class="direita">
-      <div class="resposta">
-        <textarea rows="20" cols="40"></textarea>
-      </div>
     </section>
+    <script src="app.js"></script>
   </body>
 </html>
