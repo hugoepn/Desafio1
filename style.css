@@ -1,24 +1,7 @@
-.direita {
-  width: 50vh;
+.container {
 }
 
-.resposta {
-  display: none;
-}
-.tela {
-  display: flex;
-  padding: 1rem;
-  gap: 2rem;
-  width: 100vw;
-  height: 100vh;
-}
-main {
-  width: 50vw;
-}
-
-button {
-  padding: 0.5rem;
-  margin: 0 0 0 2rem;
-}
-.texto {
+.container__conteudo {
+	display: flex;
+	gap: 2rem;
 }

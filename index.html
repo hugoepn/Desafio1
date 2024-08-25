@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decodificador</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header><h1>Bem vindo ao decodificador</h1></header>
-    <div class="tela">
-        <main>
-            <div class="texto">
-                <textarea rows="20" cols="40" placeholder="Digite seu texto"></textarea>
-            </div>
-        <div class="botoes">
-          <p class="info">Apenas letras minusculas e sem acentos</p>
-          <button>Criptografar</button><button>Descriptografar</button>
-        </div>
-      </main>
-        <section class="direita">
-          <div class="sem-reposta"><img src="lupa.png" alt="" /></div>
-          <div class="resposta">
-            <textarea rows="20" cols="40"></textarea>
-            <button>Copiar</button>
-          </div>
-    </div>
-    </section>
-    <script src="app.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Decodificador</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header><h1>Bem vindo ao decodificador</h1></header>
+		<main class="container">
+			<div class="container__conteudo">
+				<div class="container__texto__input">
+					<textarea
+						id="inputText"
+						placeholder="Digite o texto aqui..."
+						oninput="checkInput()"
+					></textarea>
+					<small id="resultMessage" class="container__input__mensagem"
+						><span class="material-symbols-outlined"> error </span> Apenas
+						letras minúsculas e sem acento.</small
+					>
+					<div class="container__botoes">
+						<button id="encryptBtn" onclick="encryptText()">
+							Criptografar
+						</button>
+						<button id="decryptBtn" onclick="decryptText()" disabled>
+							Descriptografar
+						</button>
+					</div>
+				</div>
+				<div class="container__resultado">
+					<img
+						id="noMessageImage"
+						class="imagem__nao__encontrada"
+						src="imagens/textoNaoEncontrado.png"
+						alt="Nenhuma mensagem encontrada"
+						style="display: block"
+					/>
+					<small id="outputText" class="container__resultado__mensagem"
+						><strong>Nenhuma mensagem encontrada.</strong><br />
+						Digite um texto que você deseja criptografar ou
+						descriptografar.</small
+					>
+				</div>
+			</div>
+		</main>
+		<script src="app.js"></script>
+	</body>
 </html>
